@@ -1,3 +1,4 @@
+//
 package basic01;
 
 import java.sql.Connection;
@@ -15,8 +16,11 @@ public class AdressDeleteByNoMain {
 		
 		String deleteSql=
 				"delete address where no>=10";
+		
 		Class.forName(driverClass);
+		
 		Connection con=DriverManager.getConnection(url,user,password);
+		
 		Statement stmt=con.createStatement();
 	
 		int rowCount = stmt.executeUpdate(deleteSql);

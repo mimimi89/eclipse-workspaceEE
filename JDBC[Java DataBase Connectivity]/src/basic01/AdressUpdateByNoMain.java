@@ -1,3 +1,4 @@
+//
 package basic01;
 
 import java.sql.Connection;
@@ -17,21 +18,13 @@ public class AdressUpdateByNoMain {
 		
 		String updateSql=
 				"update address set id='xxx',name='김경호',phone='888-8888',address='서울시 강남구' where no=2";
+		
 		Class.forName(driverClass);
+		
 		Connection con=DriverManager.getConnection(url,user,password);
+		
 		Statement stmt=con.createStatement();
-		/*
-		<< java.sql.Satement >>
-		public int executeUpdate(String sql) throws SQLException
-			Executes the given SQL statement,
-			which may be an INSERT, UPDATE, or DELETE statement 
-			or an SQL statement that returns nothing, 
-			such as an SQL DDL statement.
-		 return:
-		 	either (1) the row count for SQL Data Manipulation Language (DML) statements 
-		 	or (2) 0 for SQL statements that return nothing	
-			
-		 */
+	
 		int rowCount = stmt.executeUpdate(updateSql);
 		System.out.println(rowCount+ " 행 update..");
 

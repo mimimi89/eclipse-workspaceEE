@@ -14,41 +14,27 @@ public class AdressSelectAllMain {
 		String url="jdbc:oracle:thin:@182.237.126.19:1521:XE";
 		String user="javapython10";
 		String password="javapython10";
-		
+		///
 		String selectSql="select * from address";
-		
+		///
 		Class.forName(driverClass);
+		
 		Connection con=DriverManager.getConnection(url,user,password);
+		
 		Statement stmt=con.createStatement();
-		/*
-		 << Statement >>
-		 public ResultSet executeQuery(String sql) throws SQLException;
-			Executes the given SQL statement, 
-			which returns a single ResultSet object.
-
-		Parameters:
-			sql - an SQL statement to be sent to the database, 
-			typically a static SQL SELECT statement
-		Returns:
-			a ResultSet object that contains the data produced by the given query;
-			never null
-		 */
+		
 		ResultSet rs=stmt.executeQuery(selectSql);
 		
 		/*
-		<< ResultSet >>
-		boolean next() throws SQLException
-		 - Moves the cursor forward one row from its current position.
-		 - A ResultSet cursor is initially positioned before the first row; 
-		 	 the first call to the method next makes the first row the current row;
-		 	 the second call makes the second row the current row, and so on.
-		 - When a call to the next method returns false, 
-		     the cursor is positioned after the last row.
+		int rowCount=stmt.executeUpdate(sql문):
+			삽입, 업데이트, 삭제된 행의 숫자를 알고 싶을 때
+			
+		ResultSet rs=stmt.executeQuery(sql문):
+		 	추출된 행(테이블)을 보고 싶을 때
+		+하나면 while(rs.next()){
+				데이터타입 컬럼이름=rs.get데이터타입("컬럼이름")
+				System.out.println(출력하고 싶은 내용);}
 		 */
-		
-		//rs.getInt("no");
-		//Exception in thread "main" java.sql.SQLException: ResultSet.next가 호출되지 않았음
-		
 		while(rs.next()) {
 			/*
 			 DB NUMBER        --> java int, double
@@ -64,9 +50,6 @@ public class AdressSelectAllMain {
 			System.out.println(no+"\t"+id+"\t"+name+"\t"+phone+"\t"+address);
 			
 		}
-		//rs.getInt("no");
-		//Exception in thread "main" java.sql.SQLException: 결과 집합을 모두 소모했음
-		
 		rs.close();
 		stmt.close();
 		con.close();
