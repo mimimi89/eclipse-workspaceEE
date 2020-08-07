@@ -1,4 +1,4 @@
-package dao.address03;
+package dao.address03.second;
 
 public class AddressDao2TestMain {
 

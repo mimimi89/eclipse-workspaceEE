@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Date;
 
-import dao.address03.ConnectionFactory;
+import dao.address03.comm.ConnectionFactory;
 
 public class ResultSetMain {
 

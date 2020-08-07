@@ -1,4 +1,4 @@
-package dao.address03;
+package dao.address03.first;
 /*
 Dao(Data Access Object)
  - Address들의 데이터를 저장하고있는 Address 테이블에

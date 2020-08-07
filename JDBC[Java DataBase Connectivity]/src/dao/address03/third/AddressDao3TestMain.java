@@ -1,6 +1,8 @@
-package dao.address03;
+package dao.address03.third;
 
 import java.util.ArrayList;
+
+import dao.address03.Address;
 
 public class AddressDao3TestMain {
 

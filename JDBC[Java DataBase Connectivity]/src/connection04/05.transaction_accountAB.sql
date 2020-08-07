@@ -33,11 +33,11 @@ desc accounta;
 이체트랜젝션
 */
 --A계좌출금
---update accounta set acc_balance  = acc_balance - 50000 where acc_no=10000;
+update accounta set acc_balance  = acc_balance - 50000 where acc_no=10000;
 
 --select acc_balance from accounta where acc_no=10000;
 --B계좌입금
---update accountb set acc_balance  = acc_balance + 50000 where acc_no=10000;
+update accountb set acc_balance  = acc_balance + 50000 where acc_no=10000;
 
 --commit;
 --rollback;

@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import dao.address03.ConnectionFactory;
+import dao.address03.comm.ConnectionFactory;
 
 public class ScrollableResultSetMain {
 

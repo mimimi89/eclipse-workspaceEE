@@ -1,4 +1,4 @@
-package dao.address03;
+package dao.address03.third;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
+
+import dao.address03.Address;
 
 public class AddressDao3 {
 		/************** DB접속정보 **************/

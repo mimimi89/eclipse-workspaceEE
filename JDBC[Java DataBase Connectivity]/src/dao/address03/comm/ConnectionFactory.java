@@ -1,4 +1,4 @@
-package dao.address03;
+package dao.address03.comm;
 /*
  * Connection 객체 생성과 해제 작업을 전담하는 클래스
  */
