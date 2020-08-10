@@ -2,6 +2,7 @@ package dao.dept;
 
 
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -12,12 +13,15 @@ import java.util.Map;
  * @author  
  */
 public interface DeptDao {
+	
 	// 부서 등록
-	public void insert(Dept deparment) throws Exception;
+	int insert(Dept insertDept) throws Exception;
+	
 	// 부서번호로 부서정보 반환
-	public Dept selectByNo(int deptno) throws Exception;
+	Dept selectByNo(int fno) throws Exception;
+	
 	// 부서 전체목록 반환
-	public List selectByAll() throws Exception;
+	ArrayList<Dept> selectAll() throws Exception;
 	
 }
 
