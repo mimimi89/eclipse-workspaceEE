@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		a tag: 다른 페이지 특정 위치로 이동할 때 사용하는 태그
+		<hr>
+	</div>
+	
+	<ul>
+		<li>----절대경로[URL] (http:// ~)----</li>
+		<li><a href="http://www.naver.com/index.html" target="_self">네이버</a></li>
+		<li><a href="http://www.duam.net/index.html">다음</a></li>
+		<li><a href="http://www.192.168.15.5/servletSite/gugudan.do" target="_black">강한 구구단</a></li>
+		
+	</ul>
+		
+	<ul>
+		<li>----절대경로[URL] 내 서버 servletSite Context 리소스----</li>
+		<li><a href="http://192.168.15.10/servletSite/gugudan.do">강사 구구단[서블릿]</a></li>
+		<li><a href="http://192.168.15.10/servletSite/index.html">강사 inedx, htm[html]</a></li>
+		<li><a href="http://192.168.15.10/servletSite/tomcat.gif">강사 tomcat.gif[image]</a></li>
+		<li><a href="http://192.168.15.10/servletSite/html2/12.hyperlink.html">강사 html2/12.hyper,html[html]</a></li>
+	
+	</ul>
+	
+	<ul>
+		<li>----상대경로[URL] 내 서버 servletSite Context 리소스----</li>
+		<li><a href='../gugudan.do'>강사 구구단[서블릿]</a></li>
+		<li><a href='../index.html'>강사 inedx, htm[html]</a></li>
+		<li><a href='../tomcat.gif'>강사 tomcat.gif[image]</a></li>
+		<li><a href='12.hyperlink.html'>강사 html2/12.hyper,html[html]</a></li>
+		
+		<li><a href='./images/penguin/penguin1.gif'>펭귄1</a></li>
+		<li><a href='./images/penguin/penguin2.gif'>펭귄2</a></li>
+		<li><a href='./images/penguin/penguin3.gif'>펭귄3</a></li>
+	
+	</ul>
+	
+
+</body>
+</html>
