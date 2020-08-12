@@ -9,30 +9,17 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-/*
 
-  <servlet>
-  	<servlet-name>lifecycle counter</servlet-name>
-  	<servlet-class>com.itwill.servlet.LifeCycleCounterServlet</servlet-class>
-  	<load-on-startup>-2</load-on-startup>
-  </servlet>
-  
-  <servlet-mapping>
-  	<servlet-name>lifecycle counter</servlet-name>
-    <url-pattern>/lifecycle.do</url-pattern>
-    <url-pattern>/lifecycle</url-pattern>
-    <url-pattern>/lifecycle.html</url-pattern>
-    <url-pattern>/lifecycle.nhn</url-pattern>
-  </servlet-mapping>
-
- */
 
 @WebServlet("/imagecounter.do")
 public class LifeCycleImageCounterServlet extends HttpServlet {
+	
 	int count;
+	
 	public LifeCycleImageCounterServlet() {
 		System.out.println("0.LifeCycleCounterServlet 기본생성자호출:"+ this);
 	}
+	
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		super.init(config);
@@ -57,7 +44,11 @@ public class LifeCycleImageCounterServlet extends HttpServlet {
 		out.println("<body bgcolor=#40e0d0 style=\"font-size: 9pt; line-height: 140%;\">");
 		out.println("	<center>");
 		count++;
-		out.println("현재까지의 페이지뷰수[요청횟수]<img src='images/5.png'><img src='images/9.png' >번입니다");
+		out.println("현재까지의 페이지뷰수[요청횟수]"+count+"번입니다");
+		
+		
+		//<img src='images/????.png'>
+		
 		out.println("	</center>");
 		out.println("</body>");
 		out.println("</html>");
