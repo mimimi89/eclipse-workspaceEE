@@ -44,11 +44,12 @@ public class LifeCycleImageCounterServlet extends HttpServlet {
 		out.println("<body bgcolor=#40e0d0 style=\"font-size: 9pt; line-height: 140%;\">");
 		out.println("	<center>");
 		count++;
-		out.println("현재까지의 페이지뷰수[요청횟수]"+count+"번입니다");
-		
-		
-		//<img src='images/????.png'>
-		
+		String countStr=count+"";
+		out.print("현재까지의 페이지뷰수[요청횟수]");
+		for (int i = 0; i < countStr.length(); i++) {
+			out.print("<img src='images/"+countStr.charAt(i)+".png'>");
+		}
+		out.println("번입니다");
 		out.println("	</center>");
 		out.println("</body>");
 		out.println("</html>");

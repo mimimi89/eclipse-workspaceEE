@@ -1,4 +1,4 @@
-package dao.address03.comm;
+package com.itwill.address;
 /*
  * Connection 객체 생성과 해제 작업을 전담하는 클래스
  */
@@ -32,7 +32,6 @@ private ConnectionFactory() {
 		con.close();
 	}
 
-	
 	
 	
 }

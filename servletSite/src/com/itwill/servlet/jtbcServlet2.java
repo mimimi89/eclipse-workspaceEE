@@ -6,12 +6,16 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.itwill.address.Address;
+import com.itwill.address.AddressService;
 
 /**
  * Servlet implementation class jtbcServlet1
@@ -22,10 +26,17 @@ public class jtbcServlet2 extends HttpServlet {
 	protected void service(HttpServletRequest request, 
 						   HttpServletResponse response) throws ServletException, IOException {
 		try {
-			//response.setContentType("text/html");
 			response.setContentType("text/html;charset=UTF-8");
 			
 			PrintWriter out=response.getWriter();
+			/*
+			 * 1. Service 객체 생성(AddressService)
+			 * 2. Service 객체 method 호출
+			 */
+			AddressService addressService=new AddressService();
+			ArrayList<Address> addressList=addressService.selectAll();
+			
+			
 			Class.forName("oracle.jdbc.OracleDriver");
 			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@182.237.126.19:1521:XE", 
 										"javapython10",
@@ -47,11 +58,15 @@ public class jtbcServlet2 extends HttpServlet {
 			out.println("<td align=center height=20 width=50%><font color=#FFFFFF>주소</font></td>");
 			out.println("</tr>");
 			
+			for(int i=0; i<addressList.size();i++) {
+				Address address=addressList.get(i);
 				out.println("<tr class=t1>");
-				out.println("<td align=center width=25% height=20>name</td>");
-				out.println("<td align=center width=25% height=20>phone</td>");
-				out.println("<td align=center width=50% height=20>address</td>");
+				out.println("<td align=center width=25% height=20>"+address.getName() +"</td>");
+				out.println("<td align=center width=25% height=20>"+address.getPhone() +"</td>");
+				out.println("<td align=center width=50% height=20>"+address.getAddress() +"</td>");
 				out.println("</tr>");
+				
+			}
 				
 			
 		

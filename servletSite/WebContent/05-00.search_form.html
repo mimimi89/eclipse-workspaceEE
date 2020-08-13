@@ -13,15 +13,21 @@ form tag
  - action:요청할 URL(서블릿URL)
  - method:요청방법
  -->
-	<form action="search.do" method="get">
-		검색어:<input type="text" name="searchkeyword">
+<form action="search.do">
+	검색어: <input type="text" name="searchKeyword">
+	<input type="submit" value="검색요청">
 		<!--
 		<< submit button >>
-			form안에 존재해야하며 버튼클릭시에 자기가 속해있는 폼의
-			데이타모두를 가지고 action url 에 기술되어있는
+			form안에 존재해야 하며 버튼 클릭 시에 자기가 속해 있는 폼의
+			데이타 모두를 쿼리스트링의 형태로 만든 후 action url에 기술되어 있는
 			서블릿으로 요청한다
 	 -->
-		<input type="submit" value="검색요청">
-	</form>
+</form>
+		
 </body>
 </html>
+
+
+
+
+
