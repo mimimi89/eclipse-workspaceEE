@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class jtbcServlet1
  */
 @WebServlet("/jdbc1.do")
-public class jtbcServlet1 extends HttpServlet {
+public class jdbcServlet1 extends HttpServlet {
 	
 	protected void service(HttpServletRequest request, 
 						   HttpServletResponse response) throws ServletException, IOException {

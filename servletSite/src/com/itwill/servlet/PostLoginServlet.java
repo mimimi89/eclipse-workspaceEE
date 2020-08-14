@@ -18,11 +18,16 @@ public class PostLoginServlet extends HttpServlet {
 	@Override
 		protected void doGet(HttpServletRequest request, 
 							 HttpServletResponse response) throws ServletException, IOException {
+			/*
 			System.out.println("요청방식(method):"+request.getMethod());
 			response.setContentType("text/html;charset=UTF-8");
 			PrintWriter out=response.getWriter();
 			out.print("<h1>잘못된 요청 방식입니다.</h1><hr>");
 			out.print("<a href='05-02.login_post.html'>로그인폼[POST]</a><hr>");
+			*/
+			response.sendRedirect("05-02.login_post.html");
+			//redirection 없으면 잘못된 요청 방식입니다.
+		
 		}
 	
 	
@@ -66,8 +71,13 @@ public class PostLoginServlet extends HttpServlet {
 		out.println("<h1>POST 로그인결과</h1><hr>");
 		if(isMember1 || isMember2) {
 			//로그인성공
+			/*
 			out.println("<h3>"+id+" 님 로그인성공<h3><hr>");
 			out.println("<a href='index.html'>메인으로</a>");
+			*/
+			response.sendRedirect("index.html");
+			//redirection 없으면 로그인성공
+			//네이버에서 로그인 성공하면 메인페이지로 이동하는 것과 같은 원리
 		}else {
 			//로그인실패
 			out.println("<h3>"+id+" 님 로그인실퐤<h3><hr>");

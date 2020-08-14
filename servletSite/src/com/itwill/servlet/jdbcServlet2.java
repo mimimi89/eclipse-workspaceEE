@@ -21,7 +21,7 @@ import com.itwill.address.AddressService;
  * Servlet implementation class jtbcServlet1
  */
 @WebServlet("/jdbc2.do")
-public class jtbcServlet2 extends HttpServlet {
+public class jdbcServlet2 extends HttpServlet {
 	
 	protected void service(HttpServletRequest request, 
 						   HttpServletResponse response) throws ServletException, IOException {
