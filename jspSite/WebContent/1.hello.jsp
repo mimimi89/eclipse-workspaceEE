@@ -5,7 +5,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Hello JSP[change]</h1>
+<% 
+for(int i=0; i<100; i++){
+%>
+
+	<h3>Hello JSP[change]</h3>
 	<hr/>
+<% 
+}
+%>
 </body>
 </html>
