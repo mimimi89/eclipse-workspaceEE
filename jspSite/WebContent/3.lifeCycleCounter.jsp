@@ -1,3 +1,7 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%!
+	private int count=0;
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,7 +11,7 @@
 			<center>			
 			 현재까지의 접속자수
 			<font color=#0000FF>
-			 13
+			 <%= ++count %>
 			</font>
 			 명입니다 
 			</center> 
