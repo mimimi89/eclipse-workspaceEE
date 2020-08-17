@@ -17,7 +17,7 @@ private ConnectionFactory() {
 		
 		Properties dbProperties=new Properties();
 		dbProperties.load(
-				ConnectionFactory.class.getResourceAsStream("../db.properties"));
+				ConnectionFactory.class.getResourceAsStream("db.properties"));
 		String driverClass=dbProperties.getProperty("driverClass");
 		String url=dbProperties.getProperty("url");
 		String user=dbProperties.getProperty("user");
