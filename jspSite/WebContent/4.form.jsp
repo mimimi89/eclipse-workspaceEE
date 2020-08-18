@@ -1,60 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>회원 가입</title>
-
-<link rel="stylesheet" type="text/css" href="css/co.css">
-<link rel="stylesheet" type="text/css" href="css/member.css">
-<!-- 
-<link rel="stylesheet" type="text/css" href="http://s.pm.naver.net/css/main_v20150325.css">
- -->
-<style type="text/css">
-	/*
-	tag selector
-	*/
-	/*
-	body{
-		background-color: aqua;
-	}
-	form {
-		color: purple;
-	}
-	*/
-	/*
-	class selector
-	*/
-	/*
-	.TXTFLD{
-		border-width: 1px;
-		border-color: blue;
-		border-style: solid;
-		color: blue;
-	}
-	.TXTFLD1{
-		border-width: 1px;
-		border-color: red;
-		border-style: dotted;
-		color: red;
-	}
-	*/
-	/*
-	id selector
-	*/
-	/*
-	#jointbl{
-		background-color: orange;
-		border: 2px solid red; 
-	}
-	*/
-</style>
-<script type="text/javascript" src="js/co.js"></script>
-<script type="text/javascript" src="js/member.js"></script>
 </head>
 <body>
-	<h3 align="center">◆◆◆ 회원가입 ◆◆◆</h3>
-	<form name="join" method="post" action="join.do"
-		onsubmit="return checkForm(document.join);">
+	<h3 align="center">◆◆◆ 회원가입 ◆◆◆<%=request.getRemoteAddr()%>에서 접속</h3>
+	<form name="join" method="post" action="4.join.jsp">
 		<table id="jointbl" bgcolor="black" cellspacing="1" cellpadding="5" align="center">
 			<tr id="first-tr">
 				<th bgcolor="44ff44"><font size="2">아이디</font></th>
