@@ -33,7 +33,7 @@
 		out.println("<a href='1.hello.jsp'>메인으로</a>");
 	}else{
 		String msg=URLEncoder.encode("아이디패쓰워드확인", "UTF-8");
-		response.sendRedirect("4.login_post_form.jsp?msg="+msg);
+		response.sendRedirect("4.login_post_form.jsp?msg="+msg+"&id="+id+"&pass="+pass);
 		/*
 		out.println("<h3>"+id+"님 로그인실패</h3>");
 		out.println("<a href='4.login_post_form.jsp'>다시로그인</a>");

@@ -11,7 +11,7 @@ public class AdressInsertMain {
 
 	public static void main(String[] args) throws Exception {
 		
-		//설정 파일로부터 DB 접속 정보 얻기
+		//설정 파일로부터 DB 접속 정보 얻기(property[설정파일] 패키지 참고)
 		Properties dbProperties=new Properties();
 		dbProperties.load(
 				JDBCFlowMain.class.getResourceAsStream("db.properties"));
