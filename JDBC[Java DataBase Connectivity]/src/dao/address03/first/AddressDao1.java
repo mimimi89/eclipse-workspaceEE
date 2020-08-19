@@ -43,7 +43,7 @@ public class AddressDao1 {
 		String user = "javapython10";
 		String password = "javapython10";
 
-		String deleteSql = "delete address where no = 20";
+		String deleteSql = "delete address where no = 41";
 
 		Class.forName(driverClass);
 		Connection con = DriverManager.getConnection(url, user, password);
@@ -63,7 +63,7 @@ public class AddressDao1 {
 		String user = "javapython10";
 		String password = "javapython10";
 
-		String updateSql = "update address set id='xxx',name='김경미',phone='888-8888',address='서울시 강남구' where no=2";
+		String updateSql = "update address set id='xxx',name='김경미',phone='323-8916',address='서울시 마포구' where no=36";
 
 		Class.forName(driverClass);
 		Connection con = DriverManager.getConnection(url, user, password);

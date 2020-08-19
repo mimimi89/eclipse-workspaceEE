@@ -11,6 +11,7 @@ public class AddressDao1TestMain {
 	public static void main(String[] args) throws Exception {
 	
 		AddressDao1 addressDao1=new AddressDao1();
+		//인자 넣을 필요 없음, sql문에 모두 기술해 놓음
 		System.out.println("1. create ");
 		addressDao1.create();
 		
