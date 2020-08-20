@@ -6,8 +6,8 @@ public class GuestService {
 	//guest service는 guest dao를 가지고 있어야 함
 	private GuestDao guestDao;
 	
-	public GuestService() {
-		
+	public GuestService() throws Exception {
+		guestDao=new GuestDaoImpl();
 	}
 	/*
 	 * Create

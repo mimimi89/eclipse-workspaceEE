@@ -55,6 +55,12 @@ JSP주석
 		<li><%=hobbies[i]%></li>
 	<%}%>
 </ul>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<%@ include file="5-6.directive_included_file.jspf" %>
 </body>
 </html>
 
