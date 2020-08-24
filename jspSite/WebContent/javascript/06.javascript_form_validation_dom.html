@@ -5,104 +5,98 @@
 <title>Insert title here</title>
 <script type="text/javascript">
 	function load_focus(){
-		window.document.joinFrm.id.focus();
+		//window.document.joinFrm.id.focus();
+		document.getElementById('id').focus();
 	}
 	function join_form_submit_button(){
-		var id = window.document.joinFrm.id.value;
-		if(id==null || id==''){
+		
+		var f = document.getElementById('joinFrm');
+	
+		if(f.id.value==null || f.id.value==''){
 			alert('아이디를 입력하세요');
-			window.document.joinFrm.id.focus();
+			f.id.focus();
 			return false;
 		}
-		var password=document.joinFrm.password.value;
-		if(password==null || password==''){
+		
+		if(f.password.value==null || f.password.value==''){
 			alert('패쓰워드를 입력하세요');
-			window.document.joinFrm.password.focus();
+			f.password.focus();
 			return false;
 		}
-		var repassword=document.joinFrm.repassword.value;
-		if(repassword==null || repassword==''){
+		if(f.repassword.value==null || f.repassword.value==''){
 			alert('패쓰워드확인을 입력하세요');
-			window.document.joinFrm.repassword.focus();
+			f.repassword.focus();
 			return false;
 		}
-		var name=document.joinFrm.name.value;
-		if(name==null || name==''){
+		
+		if(f.name.value==null || f.name.value==''){
 			alert('이름을 입력하세요');
-			window.document.joinFrm.repassword.focus();
+			f.repassword.focus();
 			return false;
 		}
-		var address=document.joinFrm.address.value;
-		if(address==null || address==''){
+		if(f.address.value==null || f.address.value==''){
 			alert('주소를 입력하세요');
-			window.document.joinFrm.address.focus();
+			f.address.focus();
 			return false;
 		}
-		if(password != repassword){
+		if(f.password.value != f.repassword.value){
 			alert("패쓰워드와 패쓰워드확인은 일치 하여야합니다.");
-			window.document.joinFrm.repassword.select();
+			f.repassword.select();
 			return false;
 		}
 		return true;
 	}
 	function join_form_button(){
 		
-		var id = window.document.joinFrm.id.value;
+		var id = document.getElementById('id').value;
 		if(id==null || id==''){
 			alert('아이디를 입력하세요');
-			window.document.joinFrm.id.focus();
+			document.getElementById('id').focus();
 			return;
 		}
-		
-		
-		var password=document.joinFrm.password.value;
+		var password=document.getElementById('password').value;
 		if(password==null || password==''){
 			alert('패쓰워드를 입력하세요');
-			window.document.joinFrm.password.focus();
+			document.getElementById('password').focus();
 			return;
 		}
-		var repassword=document.joinFrm.repassword.value;
+		var repassword=document.getElementById('repassword').value;
 		if(repassword==null || repassword==''){
 			alert('패쓰워드확인을 입력하세요');
-			window.document.joinFrm.repassword.focus();
+			document.getElementById('repassword').focus();
 			return;
 		}
-		var name=document.joinFrm.name.value;
+		var name=document.getElementById('name').value;
 		if(name==null || name==''){
 			alert('이름을 입력하세요');
-			window.document.joinFrm.repassword.focus();
+			document.getElementById('name').focus();
 			return;
 		}
-		var address=document.joinFrm.address.value;
+		var address=document.getElementById('address').value;
 		if(address==null || address==''){
 			alert('주소를 입력하세요');
-			window.document.joinFrm.address.focus();
+			document.getElementById('address').focus();
 			return;
 		}
 		if(password != repassword){
 			alert("패쓰워드와 패쓰워드확인은 일치 하여야합니다.");
-			window.document.joinFrm.repassword.select();
+			document.getElementById('repassword').select();
 			return;
 		}
-		
 		/*
 		1.아이디는 5~10자여야한다
 		2.영문알파벳대문자,소문자,숫자만 가능
 		3.숫자로 시작할수없다
 		*/
-		
-		
-		window.document.joinFrm.action='../4.join.jsp';
-		window.document.joinFrm.method='post';
-		window.document.joinFrm.submit();
-		
+		document.getElementById('joinFrm').action='../4.join.jsp';
+		document.getElementById('joinFrm').method='post';
+		document.getElementById('joinFrm').submit();
 		return;
-		
 	}
 </script>
 </head>
 <body onload="load_focus();">
-	<h1>회원가입폼의 유효성체크[BOM]</h1><hr>
+	<h1 id="joinfrm_title">회원가입폼의 유효성체크[BOM]</h1><hr>
 	<form 	id="joinFrm" 
 			name="joinFrm" 
 			action="../4.join.jsp" 

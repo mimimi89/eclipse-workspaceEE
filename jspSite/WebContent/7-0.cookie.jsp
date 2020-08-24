@@ -1,7 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
 <head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style type="text/css">
 a:link {color:#FFFFFF}
 a:visited {color:#FFFFFF}
@@ -193,12 +196,7 @@ a.m2:hover {font-size : 10pt; text-decoration : none}
 				</td>
 			</tr>
 
-			<tr>
-				<td align="center" height="40">
-                <a href="cookie_login.html" class="m1">[ 쿠키를 활용한 
-                회원 인증 예제 ]</a>
-				</td>
-			</tr>
+			
 		</table>
 		</td>
 	</tr>

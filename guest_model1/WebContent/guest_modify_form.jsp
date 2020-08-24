@@ -1,18 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%
+	/*
+	1.파라메타바끼  guest_no
+	2.GuestService.selectByNo()메쏘드호출
+	3.Guest를 보여준다
+	*/
+%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <title>방명록 관리</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-
-
-
-
-
 <link rel="stylesheet"
 	href="css/styles.css">
 <link rel="stylesheet"

@@ -1,17 +1,42 @@
+<%@page import="com.itwill.guest.Guest"%>
+<%@page import="com.itwill.guest.GuestService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%
+	/*
+	요청URL-->
+	  http://192.16.15.31/guest_model1/guest_view.jsp?guest_no=2
+		1 . 파라메타받기
+		2 . Service객체 메쏘드호출(업무처리)
+		3 . 요청클라이언트로 응답 
+	*/
+	String guest_noStr = request.getParameter("guest_no");
+	if(guest_noStr==null||guest_noStr.equals("")){
+		response.sendRedirect("guest_list.jsp");
+		return;
+	}
+	GuestService guestService=new GuestService();
+	Guest guest=
+			guestService.selectByNo(Integer.parseInt(guest_noStr));
+	/*
+	if(guest==null){
+		out.println("<script>");
+		out.println("alert('존재하지않는 게시물입니다');");
+		out.println("history.back();");
+		out.println("</script>");
+		return;
+	}
+	*/
+	
+	
+	
+%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <title>방명록 관리</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-
-
-
-
 
 <link rel="stylesheet"
 	href="css/styles.css">
@@ -62,7 +87,7 @@
 					</tr>
 				</table> <!-- view Form  -->
 				<form name="f" method="post">
-					<input type="hidden" name="guest_no" value="25" />
+					<input type="hidden" name="guest_no" value="<%=guest_noStr%>" />
 					<table border="0" cellpadding="0" cellspacing="1" width="590"
 						bgcolor="BBBBBB">
 						<tr>
@@ -98,10 +123,10 @@
 				</form> <br />
 				<table width=590 border=0 cellpadding=0 cellspacing=0>
 					<tr>
-						<td align=center><input type="button" value="수정"
-							onClick="guestModify();"> &nbsp; <input type="button"
-							value="삭제" onClick="guestRemove();"> &nbsp; <input
-							type="button" value="목록" onClick="guestList()"></td>
+						<td align=center>
+						<input type="button" value="수정" onClick="guestModifyForm();"> &nbsp; 
+						<input type="button" value="삭제" onClick="guestRemoveAction();"> &nbsp; 
+						<input type="button" value="목록" onClick="guestList()"></td>
 					</tr>
 				</table>
 			</td>

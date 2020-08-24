@@ -1,4 +1,3 @@
-
 <%@page import="com.itwill.guest.Guest"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.itwill.guest.GuestService"%>
@@ -71,11 +70,11 @@
 					<tr>
 						<td width=50 align=center bgcolor="ffffff" height="20"><%=guest.getGuest_no()%></td>
 						<td width=300 bgcolor="ffffff" style="padding-left: 10"><a
-							href="guest_view.jsp?guest_no=43" class="user">
+							href="guest_view.jsp?guest_no=<%=guest.getGuest_no()%>" class="user">
 								<%=guest.getGuest_title()%>
 						</a></td>
 						<td width=120 align=center bgcolor="ffffff"><%=guest.getGuest_name()%></td>
-						<td width=120 align=center bgcolor="ffffff"><%=guest.getGuest_date()%></td>
+						<td width=120 align=center bgcolor="ffffff"><%=guest.getGuest_date().substring(0,10)%></td>
 					</tr>
 					<%}%>
 					<!--guest list loop end  -->
@@ -85,8 +84,14 @@
 			</form> <br> <!-- button -->
 			<table border="0" cellpadding="0" cellspacing="1" width="590">
 				<tr>
-					<td align="right"><input type="button"
-						onclick="guestCreateForm();" value="방명록 쓰기" /></td>
+					<td align="right">
+					<input type="button"
+					    onclick="guestWriteForm();" value="방명록 쓰기" />
+					<!--  
+					<input type="button"
+					    onclick="location.href='guest_write_form.jsp';" value="방명록 쓰기" />
+					-->    
+					</td>
 				</tr>
 			</table></td>
 	</tr>
