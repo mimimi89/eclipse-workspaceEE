@@ -3,7 +3,7 @@
     pageEncoding="UTF-8"%>
 <%
 	/*
-	1. 요청객체로부터 클라이언트가 전송한 쿠키객체들얻기
+	1. 요청객체로부터 클라이언트가 전송한 쿠키 객체들 얻기
 	*/
 	Cookie[] cookies=request.getCookies();
 	String preSearchKeyword="";

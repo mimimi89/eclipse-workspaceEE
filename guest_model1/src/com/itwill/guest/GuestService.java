@@ -3,9 +3,7 @@ package com.itwill.guest;
 import java.util.ArrayList;
 
 public class GuestService {
-	//guest service는 guest dao를 가지고 있어야 함
 	private GuestDao guestDao;
-	
 	public GuestService() throws Exception {
 		guestDao=new GuestDaoImpl();
 	}
@@ -19,7 +17,7 @@ public class GuestService {
 	 * Read
 	 */
 	public Guest selectByNo(int no) throws Exception{
-		return null;
+		return guestDao.selectByNo(no);
 	}
 	public ArrayList<Guest> selectAll() throws Exception{
 		return guestDao.selectAll();
@@ -36,5 +34,4 @@ public class GuestService {
 	public int deleteGuest(int no) throws Exception{
 		return 0;
 	}
-
 }

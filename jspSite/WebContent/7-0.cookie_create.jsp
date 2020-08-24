@@ -43,14 +43,12 @@
 <h1>검색결과[쿠키생성]</h1><hr>
 <div>니 안에 searchKeywordCookie,ipCookie 쿠키들 있다.</div>
 <ol>
-	<li><%=searchKeyword %>  검색결과</li>
-	<li><%=searchKeyword %>  검색결과</li>
-	<li><%=searchKeyword %>  검색결과</li>
-	<li><%=searchKeyword %>  검색결과</li>
-	<li><%=searchKeyword %>  검색결과</li>
-	<li><%=searchKeyword %>  검색결과</li>
-	<li><%=searchKeyword %>  검색결과</li>
-	<li><%=searchKeyword %>  검색결과</li>
+	<li><%=searchKeyword %> 검색결과</li>
+	<li><%=searchKeyword %> 검색결과</li>
+	<li><%=searchKeyword %> 검색결과</li>
+	<li><%=searchKeyword %> 검색결과</li>
+	<li><%=searchKeyword %> 검색결과</li>
+	
 </ol>
 <div>
 	<a href='7-0.cookie_search.jsp'>다시검색[쿠키읽기]</a>
