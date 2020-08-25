@@ -24,10 +24,12 @@ public class UserDao  {
 		Properties properties=new Properties();
 		properties.load(this.getClass().getResourceAsStream("db.properties"));
 		BasicDataSource basicDataSource = new BasicDataSource();
+		
 		basicDataSource.setDriverClassName(properties.getProperty("driverClass"));
 		basicDataSource.setUrl(properties.getProperty("url"));
 		basicDataSource.setUsername(properties.getProperty("user"));
 		basicDataSource.setPassword(properties.getProperty("password"));
+		
 		dataSource = basicDataSource;
 		
 	}
