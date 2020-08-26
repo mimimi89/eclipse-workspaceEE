@@ -3,7 +3,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="JDBC[Java DataBase Connectivity]/src"/>
 	<classpathentry kind="src" path="property[설정파일]/src"/>
-	<classpathentry kind="src" path="servletSite/src"/>
 	<classpathentry kind="lib" path="servletSite/WebContent/WEB-INF/ojdbc6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
