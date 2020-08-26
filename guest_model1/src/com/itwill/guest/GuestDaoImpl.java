@@ -15,8 +15,17 @@ public class GuestDaoImpl implements GuestDao{
 	}
 	@Override
 	public int insertGuest(Guest guest) throws Exception {
-		
-		return 0;
+		Connection con=ConnectionFactory.getConnection();
+		PreparedStatement pstmt=con.prepareStatement(GuestSQL.GUEST_INSERT);
+		pstmt.setInt(1, guest.getGuest_no());
+		pstmt.setString(2, guest.getGuest_name());
+		pstmt.setString(3, guest.getGuest_date());
+		pstmt.setString(4, guest.getGuest_email());
+		pstmt.setString(5, guest.getGuest_homepage());		
+		pstmt.setString(6, guest.getGuest_title());
+		pstmt.setString(7, guest.getGuest_content());
+		int insertRowCount=pstmt.executeUpdate();
+		return insertRowCount;
 	}
 
 	@Override
@@ -30,12 +39,12 @@ public class GuestDaoImpl implements GuestDao{
 		ResultSet rs=pstmt.executeQuery();
 		if(rs.next()) {
 					guest=new Guest(rs.getInt("guest_no"),
-							rs.getString("guest_name"),
-							rs.getString("guest_date"),
-							rs.getString("guest_email"),
-							rs.getString("guest_homepage"),
-							rs.getString("guest_title"),
-							rs.getString("guest_content"));
+									rs.getString("guest_name"),
+									rs.getString("guest_date"),
+									rs.getString("guest_email"),
+									rs.getString("guest_homepage"),
+									rs.getString("guest_title"),
+									rs.getString("guest_content"));
 			
 		}
 		return guest ;
@@ -63,12 +72,12 @@ GUEST_CONTENT  NOT NULL VARCHAR2(4000)
 		while (rs.next()) {
 			guestList.add(
 					new Guest(rs.getInt("guest_no"),
-							rs.getString("guest_name"),
-							rs.getString("guest_date"),
-							rs.getString("guest_email"),
-							rs.getString("guest_homepage"),
-							rs.getString("guest_title"),
-							rs.getString("guest_content")));
+							  rs.getString("guest_name"),
+							  rs.getString("guest_date"),
+							  rs.getString("guest_email"),
+							  rs.getString("guest_homepage"),
+							  rs.getString("guest_title"),
+							  rs.getString("guest_content")));
 			
 		}
 		return guestList;
@@ -76,14 +85,27 @@ GUEST_CONTENT  NOT NULL VARCHAR2(4000)
 
 	@Override
 	public int updateGuest(Guest guest) throws Exception {
-		// TODO Auto-generated method stub
-		return 0;
+		Connection con=ConnectionFactory.getConnection();
+		PreparedStatement pstmt=con.prepareStatement(GuestSQL.GUEST_UPDATE);
+		pstmt.setInt(1, guest.getGuest_no());
+		pstmt.setString(2, guest.getGuest_name());
+		pstmt.setString(3, guest.getGuest_date());
+		pstmt.setString(4, guest.getGuest_email());
+		pstmt.setString(5, guest.getGuest_homepage());		
+		pstmt.setString(6, guest.getGuest_title());
+		pstmt.setString(7, guest.getGuest_content());
+		int updateRowCount=pstmt.executeUpdate();
+		return updateRowCount;
+		
 	}
 
 	@Override
 	public int deleteGuest(int no) throws Exception {
-		// TODO Auto-generated method stub
-		return 0;
+		Connection con=ConnectionFactory.getConnection();
+		PreparedStatement pstmt=con.prepareStatement(GuestSQL.GUEST_DELETE);
+		pstmt.setInt(1, no);
+		int deleteRowCount=pstmt.executeUpdate();
+		return deleteRowCount;
 	}
 
 }

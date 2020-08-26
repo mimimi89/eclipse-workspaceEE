@@ -1,13 +1,15 @@
 ﻿package com.itwill.user;
 
+import java.util.ArrayList;
+
 import com.itwill.user.exception.ExistedUserException;
 import com.itwill.user.exception.UserNotFoundException;
 import com.itwill.user.exception.PasswordMismatchException;
 
 /*
  * - 회원관리 비즈니스로직(예외처리,트랜젝션,보안,로깅)을 수행하는 클래스
- * - 웹컴퍼넌트(서블릿,JSP)에서 직접접근(메쏘드호출)하는 클래스
- * - Dao를 이용해서 데이타베이스를 조작작업하는 클래스
+ * - 웹컴퍼넌트(서블릿,JSP)에서 직접 접근(메쏘드호출)하는 클래스
+ * - Dao를 이용해서 데이타베이스를 조작 작업하는 클래스
  */
 
 public class UserService {
@@ -16,6 +18,7 @@ public class UserService {
 	public UserService() throws Exception{
 		userDao=new UserDao();
 	}
+	
 	/*
 	 * 회원가입
 	 */
@@ -30,10 +33,13 @@ public class UserService {
 	/*
 	 * 회원리스트
 	 */
+	public ArrayList<User> findUserList() throws Exception{
+		return userDao.findUserList();
+	}
+	
 	
 	/*
 	 * 아이디중복체크
-	 * 
 	 */
 	
 	/*
@@ -58,14 +64,29 @@ public class UserService {
 	/*
 	 * 회원1명보기
 	 */
+	public User findUser(String userId) throws Exception, UserNotFoundException{
+		User findUser=userDao.findUser(userId);
+		if(findUser==null) {
+			throw new UserNotFoundException("존재하지 않는 회원입니다.");
+		}
+		return findUser;
+	}
 	
 	/*
 	 * 회원탈퇴
 	 */
+	public int remove(String userId) throws Exception{
+		return userDao.remove(userId);
+	}
+	
 	
 	/*
 	 * 회원수정
 	 */
+	public int update(User user) throws Exception{
+		return userDao.update(user);
+	}
+	
 	
 	
 }

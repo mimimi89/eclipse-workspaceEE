@@ -33,6 +33,8 @@ public class UserDao  {
 		dataSource = basicDataSource;
 		
 	}
+	
+
 	/*
 	 * 사용자관리테이블에 새로운사용자생성
 	 */
@@ -180,6 +182,7 @@ public class UserDao  {
 			if(con!=null) con.close();
 		}
 		return findUserList;
+		
 	}
 	/*
 	 * 인자로 전달되는 아이디를 가지는 사용자가 존재하는지의 여부를판별
