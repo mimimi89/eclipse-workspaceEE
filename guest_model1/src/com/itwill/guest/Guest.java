@@ -1,8 +1,5 @@
 package com.itwill.guest;
 
-
-
-
 public class Guest {
 	private int guest_no;
 	private String guest_name;
