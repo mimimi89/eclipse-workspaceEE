@@ -24,7 +24,7 @@
 	/*
 	 * 3.클라이언트로 결과전송
 	 */
-	out.println("<h1>POST로그인결과</h1><hr/>");
+	out.println("<h1>GET로그인결과</h1><hr/>");
 	if(isMember1||isMember2){
 		out.println("<h3>"+id+"님 로그인 성공</h3>");
 		out.println("<a href='index.html'>메인으로</a>");

@@ -45,15 +45,17 @@ JSP주석
 <body>
 <h1>가입결과</h1>
 <ul>
-	<li><%=id %></li>
-	<li><%=pass %></li>
-	<li><%=name %></li>
-	<li><%=addr %></li>
-	<li><%=job %></li>
-	<li>취미</li>
+	<li>아이디: <%=id %></li>
+	<li>비밀번호: <%=pass %></li>
+	<li>이름: <%=name %></li>
+	<li>주소: <%=addr %></li>
+	<li>성별: <%=gender %></li>
+	<li>직업: <%=job %></li>
+	<li>취미: 
 	<%for(int i=0;i<hobbies.length;i++){ %>
 		<li><%=hobbies[i]%></li>
 	<%}%>
+	</li>
 </ul>
 <br/>
 <br/>

@@ -3,7 +3,7 @@
 	private int count=0;
 	public void jspInit(){
 		System.out.println(
-				"1.jspInit(): 객체 생성 시 단 한 번 호출되는 메쏘드[객체초기화, 리스소획득]");
+				"1.jspInit(): 객체 생성 시 단 한 번 호출되는 메쏘드[객체초기화, 리소스획득]");
 	}
 	public void jspDestroy(){
 		System.out.println(
@@ -22,7 +22,7 @@
 </head>
 			<body bgcolor=#40e0d0 style=font-size:9pt;line-height:140%;> 
 			<center>			
-			 현재까지의 접속자수
+			 현재까지의 접속자수는
 			<font color=#0000FF>
 			 <%= ++count %>
 			</font>
