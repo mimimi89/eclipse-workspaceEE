@@ -1,6 +1,6 @@
 <%@page import="com.itwill.guest.Guest"%>
 <%@page import="com.itwill.guest.GuestService"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
 	/*
@@ -15,6 +15,7 @@
 		response.sendRedirect("guest_list.jsp");
 		return;
 	}
+	
 	GuestService guestService=new GuestService();
 	Guest guest=
 			guestService.selectByNo(Integer.parseInt(guest_noStr));
@@ -37,19 +38,29 @@
 <head>
 <title>방명록 관리</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<link rel="stylesheet"
-	href="css/styles.css">
-<link rel="stylesheet"
-	href="css/guest.css">
-
-
-
-
-
-
-<script	src="js/guest.js"></script>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/guest.css">
+<script	src="text/javascript">
+	function guestList() {
+			location.href='guest_list.jsp';
+	}
+	
+	function guestModifyForm() {
+		document.f.action = "guest_modify_form.jsp";
+		document.f.method = "POST";
+		document.f.submit();
+	}
+	
+	function guestRemoveAction() {
+		if (window.confirm("정말 삭제하시겠습니까?")) {
+			document.f.action = "guest_remove_action.jsp";
+			document.f.method='POST';
+			document.f.submit();
+		}
+	}
+</script>
 </head>
+
 <body bgcolor=#FFFFFF text=#000000 leftmargin=0 topmargin=0
 	marginwidth=0 marginheight=0>
 	<!-- container start-->
@@ -87,23 +98,23 @@
 					</tr>
 				</table> <!-- view Form  -->
 				<form name="f" method="post">
-					<input type="hidden" name="guest_no" value="<%=guest_noStr%>" />
+					<input type="hidden" name="guest_no" value="<%=guest.getGuest_no() %>" />
 					<table border="0" cellpadding="0" cellspacing="1" width="590"
 						bgcolor="BBBBBB">
 						<tr>
 							<td width=100 align=center bgcolor="E6ECDE" height="22">번호</td>
 							<td width=490 bgcolor="ffffff" align="left"
-								style="padding-left: 10px"><%=guest.getGuest_no()%></td>
+								style="padding-left: 10px"><%=guest.getGuest_no() %></td>
 						</tr>
 						<tr>
 							<td width=100 align=center bgcolor="E6ECDE" height="22">이름</td>
 							<td width=490 bgcolor="ffffff" align="left"
-								style="padding-left: 10px"><%=guest.getGuest_name()%></td>
+								style="padding-left: 10px"><%=guest.getGuest_name() %></td>
 						</tr>
 						<tr>
 							<td width=100 align=center bgcolor="E6ECDE" height="22">날짜</td>
 							<td width=490 bgcolor="ffffff" align="left"
-								style="padding-left: 10px"><%=guest.getGuest_date().substring(0,10)%></td>
+								style="padding-left: 10px"><%=guest.getGuest_date().substring(0,10) %></td>
 						<tr>
 							<td width=100 align=center bgcolor="E6ECDE" height="22">홈페이지</td>
 							<td width=490 bgcolor="ffffff" align="left"

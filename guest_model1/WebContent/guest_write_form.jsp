@@ -9,10 +9,11 @@
 	href="css/styles.css">
 <link rel="stylesheet"
 	href="css/guest.css">
-<!-- 
+
 <script	src="js/guest.js"></script>
- -->
+
 <script type="text/javascript">
+/*
 	function guestWriteAction(){
 		if(document.f.guest_name.value==''){
 			alert('이름을 입력하세요');
@@ -25,7 +26,7 @@
 		document.f.submit();
 		
 	}
-
+*/
 </script>
 </head>
 <body bgcolor=#FFFFFF text=#000000 leftmargin=0 topmargin=0

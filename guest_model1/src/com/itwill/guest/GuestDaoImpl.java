@@ -13,18 +13,18 @@ public class GuestDaoImpl implements GuestDao{
 	public GuestDaoImpl() throws Exception{
 		
 	}
+	
 	@Override
 	public int insertGuest(Guest guest) throws Exception {
 		Connection con=ConnectionFactory.getConnection();
 		PreparedStatement pstmt=con.prepareStatement(GuestSQL.GUEST_INSERT);
-		pstmt.setInt(1, guest.getGuest_no());
-		pstmt.setString(2, guest.getGuest_name());
-		pstmt.setString(3, guest.getGuest_date());
-		pstmt.setString(4, guest.getGuest_email());
-		pstmt.setString(5, guest.getGuest_homepage());		
-		pstmt.setString(6, guest.getGuest_title());
-		pstmt.setString(7, guest.getGuest_content());
+		pstmt.setString(1, guest.getGuest_name());
+		pstmt.setString(2, guest.getGuest_email());
+		pstmt.setString(3, guest.getGuest_homepage());		
+		pstmt.setString(4, guest.getGuest_title());
+		pstmt.setString(5, guest.getGuest_content());
 		int insertRowCount=pstmt.executeUpdate();
+		ConnectionFactory.releaseConnection(con);
 		return insertRowCount;
 	}
 
@@ -87,14 +87,14 @@ GUEST_CONTENT  NOT NULL VARCHAR2(4000)
 	public int updateGuest(Guest guest) throws Exception {
 		Connection con=ConnectionFactory.getConnection();
 		PreparedStatement pstmt=con.prepareStatement(GuestSQL.GUEST_UPDATE);
-		pstmt.setInt(1, guest.getGuest_no());
-		pstmt.setString(2, guest.getGuest_name());
-		pstmt.setString(3, guest.getGuest_date());
-		pstmt.setString(4, guest.getGuest_email());
-		pstmt.setString(5, guest.getGuest_homepage());		
-		pstmt.setString(6, guest.getGuest_title());
-		pstmt.setString(7, guest.getGuest_content());
+		pstmt.setString(1, guest.getGuest_name());
+		pstmt.setString(2, guest.getGuest_email());
+		pstmt.setString(3, guest.getGuest_homepage());		
+		pstmt.setString(4, guest.getGuest_title());
+		pstmt.setString(5, guest.getGuest_content());
+		pstmt.setInt(6, guest.getGuest_no());
 		int updateRowCount=pstmt.executeUpdate();
+		ConnectionFactory.releaseConnection(con);
 		return updateRowCount;
 		
 	}
