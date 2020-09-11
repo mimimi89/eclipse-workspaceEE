@@ -23,8 +23,8 @@
       <constraint>
         <height>-1</height>
         <width>-1</width>
-        <x>207</x>
-        <y>193</y>
+        <x>84</x>
+        <y>66</y>
       </constraint>
       <sourceConnections/>
       <targetConnections>
@@ -51,8 +51,8 @@
             <constraint>
               <height>-1</height>
               <width>-1</width>
-              <x>642</x>
-              <y>192</y>
+              <x>369</x>
+              <y>67</y>
             </constraint>
             <sourceConnections>
               <net.java.amateras.db.visual.model.ForeignKeyModel reference="../../.."/>
@@ -258,18 +258,18 @@
         <green>255</green>
         <blue>206</blue>
       </backgroundColor>
-      <sql>INSERT INTO member (m_id, m_name, m_address, m_point, m_gender, m_date) VALUES (m_id, m_name, m_address, m_point, m_gender, m_date);INSERT INTO member () VALUES ();INSERT INTO member (m_id, m_name, m_address, m_point, m_gender, m_date) VALUES (m_id, m_name, m_address, m_point, m_gender, m_date);</sql>
+      <sql></sql>
     </net.java.amateras.db.visual.model.TableModel>
     <net.java.amateras.db.visual.model.TableModel reference="../net.java.amateras.db.visual.model.TableModel/targetConnections/net.java.amateras.db.visual.model.ForeignKeyModel/source"/>
   </children>
   <dommains/>
   <dialectName>Oracle</dialectName>
   <logicalMode>false</logicalMode>
-  <jarFile>C:\JAVA_PYTHON_MI\04 JDBC\99.LIB\ojdbc6.jar</jarFile>
+  <jarFile>C:\JAVA_PYTHON\04.JDBC\99.LIB\ojdbc6.jar</jarFile>
   <jdbcDriver>oracle.jdbc.OracleDriver</jdbcDriver>
   <jdbcUrl>jdbc:oracle:thin:@182.237.126.19:1521:XE</jdbcUrl>
-  <jdbcUser>javapython10</jdbcUser>
-  <jdbcPassword>javapython10</jdbcPassword>
+  <jdbcUser>javapython31</jdbcUser>
+  <jdbcPassword>javapython31</jdbcPassword>
   <jdbcSchema></jdbcSchema>
   <jdbcCatalog></jdbcCatalog>
   <includeView>false</includeView>

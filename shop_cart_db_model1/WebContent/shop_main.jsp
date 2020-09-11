@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -15,34 +17,14 @@
 		<!-- header start -->
 		<div id="header">
 			<!-- include_common_top.jsp start-->
-			
-<h1>
-	<a href="">WEB SAMPLE SITE</a>
-</h1>
-
+			<jsp:include page="include_common_top.jsp"/>		
 			<!-- include_common_top.jsp end-->
 		</div>
 		<!-- header end -->
 		<!-- navigation start-->
 		<div id="navigation">
 			<!-- include_common_left.jsp start-->
-			
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<p>
-	<strong>메 뉴</strong>
-</p>
-<ul>
-	
-	
-		<li><a href="user_write_form.jsp">회원가입</a></li>
-		<li><a href="user_login_form.jsp">로그인</a></li>
-		<li><a href="shop_product_list.jsp">쇼핑몰</a></li>
-		<li><a></a></li>
-	
-		<li><a href="board_list.jsp">게시판리스트</a></li>
-		<li><a href="board_write.jsp">게시판쓰기</a></li>
-</ul>
-
+			<jsp:include page="include_common_left.jsp"/>	
 			<!-- include_common_left.jsp end-->
 		</div>
 		<!-- navigation end-->
@@ -70,10 +52,7 @@
 		<!--wrapper end-->
 		<div id="footer">
 			<!-- include_common_bottom.jsp start-->
-			
-	<p align="center">Copyright (&copy;) By Javabig2. All
-		rights reserved.</p>
-
+			<jsp:include page="include_common_bottom.jsp"/>	
 			<!-- include_common_bottom.jsp end-->
 		</div>
 	</div>

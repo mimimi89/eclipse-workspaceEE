@@ -11,12 +11,10 @@ import javax.sql.DataSource;
 
 public class ProductDao {
 	private DataSource dataSource;
-
 	public ProductDao() throws Exception {
 		InitialContext ic = new InitialContext();
 		dataSource = (DataSource) ic.lookup("java:/comp/env/jdbc/OracleDB");
 	}
-
 	public ArrayList<Product> getProductList() throws Exception {
 		Connection con = null;
 		PreparedStatement pstmt = null;

@@ -5,9 +5,42 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>회원 가입</title>
+<style type="text/css">
+	/*
+	tag(html) selector 
+	*/
+	body{
+		background-color: aqua;
+		color: white;
+	}
+	form{
+		color: purple;
+	}
+	/*
+	class selector
+	   -이름앞에 . 을 기술한다.
+	*/
+	.TXTFLD{
+		border-width: 1px;
+		border-color: blue;
+		color:blue;
+		border-style: dotted;
+		border-radius: 10px;
+	}
+	.TXTFLD1{
+		border-width: 1px;
+		border-color: red;
+		color:red;
+		border-style: dotted;
+		border-radius: 10px;
+	
+	}
+	
+	
+</style>
 </head>
 <body>
-	<h3 align="center">◆◆◆ 회원가입 ◆◆◆<%=request.getRemoteAddr()%>에서 접속</h3>
+	<h3 align="center">◆◆◆ 회원가입 ◆◆◆[<%=request.getRemoteAddr()%>]에서접속</h3>
 	<form name="join" method="post" action="4.join.jsp">
 		<table id="jointbl" bgcolor="black" cellspacing="1" cellpadding="5" align="center">
 			<tr id="first-tr">
@@ -37,14 +70,15 @@
 			</tr>
 			<tr>
 				<th bgcolor="44ff44"><font size="2">성별</font></th>
-				<td bgcolor="white" width="300">
-				<input type="radio" name="gender" value="남자"><font size="2">남자</font> 
-				<input type="radio" name="gender" value="여자" checked="checked"><font size="2">여자</font></td>
+				<td bgcolor="white" width="300"><input type="radio"
+					name="gender" value="남자"><font size="2">남자</font> <input
+					type="radio" name="gender" value="여자" checked="checked"><font
+					size="2">여자</font></td>
 			</tr>
 			<tr>
 				<th bgcolor="44ff44"><font size="2">직업</font></th>
 				<td bgcolor="white" width="300"><select name="job" size="1">
-						<option value="직업을선택하세요"><font size="2">직업을 선택하세요</font></option>
+						<option value="직업을선택하세요"><font size="2">직업을선택하세요</font></option>
 						<option value="학생"><font size="2">학생</font></option>
 						<option value="주부"><font size="2">주부</font></option>
 						<option value="회사원"><font size="2">회사원</font></option>
@@ -53,18 +87,23 @@
 			</tr>
 			<tr>
 				<th bgcolor="44ff44"><font size="2">취미</font></th>
-				<td bgcolor="white" width="300">
-					<input type="checkbox"name="hobby" value="컴퓨터" checked><font size="2">컴퓨터</font>
-					<input type="checkbox" name="hobby" value="낮잠"><font size="2">낮잠</font> 
-					<input type="checkbox" name="hobby" value="연애"><font size="2">연애</font> 
-					<input type="checkbox" name="hobby" value="운동"><font size="2">운동</font> 
-					<input type="checkbox" name="hobby" value="기타"><font size="2">기타</font>
-				</td>
+				<td bgcolor="white" width="300"><input type="checkbox"
+					name="hobby" value="컴퓨터" checked><font size="2">컴퓨터</font>
+					<input type="checkbox" name="hobby" value="낮잠"><font
+					size="2">낮잠</font> <input type="checkbox" name="hobby" value="연애"><font
+					size="2">연애</font> <input type="checkbox" name="hobby" value="운동"><font
+					size="2">운동</font> <input type="checkbox" name="hobby" value="기타"><font
+					size="2">기타</font></td>
 			</tr>
 			<th colspan="2" bgcolor="ff8888"><input type="submit" value="가입">
 				<input type="reset" value="취소"></th>
 			</tr>
 		</table>
 	</form>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<%@ include file="5-6.directive_included_file.jspf" %>
 </body>
 </html>

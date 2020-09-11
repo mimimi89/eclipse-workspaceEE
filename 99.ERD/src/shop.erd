@@ -23,8 +23,8 @@
       <constraint>
         <height>-1</height>
         <width>-1</width>
-        <x>95</x>
-        <y>29</y>
+        <x>57</x>
+        <y>48</y>
       </constraint>
       <sourceConnections/>
       <targetConnections>
@@ -51,8 +51,8 @@
             <constraint>
               <height>-1</height>
               <width>-1</width>
-              <x>109</x>
-              <y>378</y>
+              <x>49</x>
+              <y>387</y>
             </constraint>
             <sourceConnections>
               <net.java.amateras.db.visual.model.ForeignKeyModel reference="../../.."/>
@@ -81,8 +81,8 @@
                   <constraint>
                     <height>-1</height>
                     <width>-1</width>
-                    <x>613</x>
-                    <y>412</y>
+                    <x>416</x>
+                    <y>394</y>
                   </constraint>
                   <sourceConnections>
                     <net.java.amateras.db.visual.model.ForeignKeyModel reference="../../.."/>
@@ -110,8 +110,8 @@
                         <constraint>
                           <height>-1</height>
                           <width>-1</width>
-                          <x>1196</x>
-                          <y>376</y>
+                          <x>859</x>
+                          <y>334</y>
                         </constraint>
                         <sourceConnections/>
                         <targetConnections>
@@ -139,8 +139,8 @@
                               <constraint>
                                 <height>-1</height>
                                 <width>-1</width>
-                                <x>522</x>
-                                <y>38</y>
+                                <x>513</x>
+                                <y>84</y>
                               </constraint>
                               <sourceConnections>
                                 <net.java.amateras.db.visual.model.ForeignKeyModel>
@@ -271,7 +271,12 @@
                           <net.java.amateras.db.visual.model.ColumnModel>
                             <columnName>product_name</columnName>
                             <logicalName>product_name</logicalName>
-                            <columnType class="net.java.amateras.db.dialect.ColumnType" reference="../../../targetConnections/net.java.amateras.db.visual.model.ForeignKeyModel[2]/source/columns/net.java.amateras.db.visual.model.ColumnModel[4]/columnType"/>
+                            <columnType class="net.java.amateras.db.dialect.ColumnType">
+                              <name>VARCHAR2</name>
+                              <logicalName>String</logicalName>
+                              <supportSize>true</supportSize>
+                              <type>12</type>
+                            </columnType>
                             <size>100</size>
                             <notNull>false</notNull>
                             <primaryKey>false</primaryKey>
@@ -293,7 +298,7 @@
                           <net.java.amateras.db.visual.model.ColumnModel>
                             <columnName>product_image</columnName>
                             <logicalName>product_image</logicalName>
-                            <columnType class="net.java.amateras.db.dialect.ColumnType" reference="../../../targetConnections/net.java.amateras.db.visual.model.ForeignKeyModel[2]/source/columns/net.java.amateras.db.visual.model.ColumnModel[4]/columnType"/>
+                            <columnType class="net.java.amateras.db.dialect.ColumnType" reference="../../net.java.amateras.db.visual.model.ColumnModel[2]/columnType"/>
                             <size>50</size>
                             <notNull>false</notNull>
                             <primaryKey>false</primaryKey>
@@ -304,7 +309,7 @@
                           <net.java.amateras.db.visual.model.ColumnModel>
                             <columnName>product_desc</columnName>
                             <logicalName>product_desc</logicalName>
-                            <columnType class="net.java.amateras.db.dialect.ColumnType" reference="../../../targetConnections/net.java.amateras.db.visual.model.ForeignKeyModel[2]/source/columns/net.java.amateras.db.visual.model.ColumnModel[4]/columnType"/>
+                            <columnType class="net.java.amateras.db.dialect.ColumnType" reference="../../net.java.amateras.db.visual.model.ColumnModel[2]/columnType"/>
                             <size>1024</size>
                             <notNull>false</notNull>
                             <primaryKey>false</primaryKey>
@@ -346,7 +351,12 @@
                     <net.java.amateras.db.visual.model.ColumnModel>
                       <columnName>jumun_detail_no</columnName>
                       <logicalName>jumun_detail_no</logicalName>
-                      <columnType class="net.java.amateras.db.dialect.ColumnType" reference="../../../sourceConnections/net.java.amateras.db.visual.model.ForeignKeyModel[2]/target/targetConnections/net.java.amateras.db.visual.model.ForeignKeyModel[2]/source/columns/net.java.amateras.db.visual.model.ColumnModel[5]/columnType"/>
+                      <columnType class="net.java.amateras.db.dialect.ColumnType">
+                        <name>NUMBER</name>
+                        <logicalName>Numeric</logicalName>
+                        <supportSize>true</supportSize>
+                        <type>2</type>
+                      </columnType>
                       <size>10</size>
                       <notNull>false</notNull>
                       <primaryKey>true</primaryKey>
@@ -357,7 +367,12 @@
                     <net.java.amateras.db.visual.model.ColumnModel>
                       <columnName>jumun_no</columnName>
                       <logicalName>jumun_no</logicalName>
-                      <columnType class="net.java.amateras.db.dialect.ColumnType" reference="../../../sourceConnections/net.java.amateras.db.visual.model.ForeignKeyModel[2]/target/targetConnections/net.java.amateras.db.visual.model.ForeignKeyModel[2]/source/columns/net.java.amateras.db.visual.model.ColumnModel[5]/columnType"/>
+                      <columnType class="net.java.amateras.db.dialect.ColumnType">
+                        <name>NUMBER</name>
+                        <logicalName>Numeric</logicalName>
+                        <supportSize>true</supportSize>
+                        <type>2</type>
+                      </columnType>
                       <size>10</size>
                       <notNull>false</notNull>
                       <primaryKey>false</primaryKey>
@@ -415,7 +430,7 @@
               <net.java.amateras.db.visual.model.ColumnModel>
                 <columnName>jumun_no</columnName>
                 <logicalName>jumun_no</logicalName>
-                <columnType class="net.java.amateras.db.dialect.ColumnType" reference="../../../targetConnections/net.java.amateras.db.visual.model.ForeignKeyModel/source/sourceConnections/net.java.amateras.db.visual.model.ForeignKeyModel[2]/target/targetConnections/net.java.amateras.db.visual.model.ForeignKeyModel[2]/source/columns/net.java.amateras.db.visual.model.ColumnModel[5]/columnType"/>
+                <columnType class="net.java.amateras.db.dialect.ColumnType" reference="../../../targetConnections/net.java.amateras.db.visual.model.ForeignKeyModel/source/columns/net.java.amateras.db.visual.model.ColumnModel[2]/columnType"/>
                 <size>10</size>
                 <notNull>false</notNull>
                 <primaryKey>true</primaryKey>
@@ -426,7 +441,12 @@
               <net.java.amateras.db.visual.model.ColumnModel>
                 <columnName>jumun_desc</columnName>
                 <logicalName>jumun_desc</logicalName>
-                <columnType class="net.java.amateras.db.dialect.ColumnType" reference="../../../targetConnections/net.java.amateras.db.visual.model.ForeignKeyModel/source/sourceConnections/net.java.amateras.db.visual.model.ForeignKeyModel[2]/target/targetConnections/net.java.amateras.db.visual.model.ForeignKeyModel[2]/source/columns/net.java.amateras.db.visual.model.ColumnModel[4]/columnType"/>
+                <columnType class="net.java.amateras.db.dialect.ColumnType">
+                  <name>VARCHAR2</name>
+                  <logicalName>String</logicalName>
+                  <supportSize>true</supportSize>
+                  <type>12</type>
+                </columnType>
                 <size>50</size>
                 <notNull>false</notNull>
                 <primaryKey>false</primaryKey>
@@ -453,7 +473,7 @@
               <net.java.amateras.db.visual.model.ColumnModel>
                 <columnName>jumun_price</columnName>
                 <logicalName>jumun_price</logicalName>
-                <columnType class="net.java.amateras.db.dialect.ColumnType" reference="../../../targetConnections/net.java.amateras.db.visual.model.ForeignKeyModel/source/sourceConnections/net.java.amateras.db.visual.model.ForeignKeyModel[2]/target/targetConnections/net.java.amateras.db.visual.model.ForeignKeyModel[2]/source/columns/net.java.amateras.db.visual.model.ColumnModel[5]/columnType"/>
+                <columnType class="net.java.amateras.db.dialect.ColumnType" reference="../../../targetConnections/net.java.amateras.db.visual.model.ForeignKeyModel/source/columns/net.java.amateras.db.visual.model.ColumnModel[2]/columnType"/>
                 <size>10</size>
                 <notNull>false</notNull>
                 <primaryKey>false</primaryKey>
@@ -466,17 +486,6 @@
                 <logicalName>user_id</logicalName>
                 <columnType class="net.java.amateras.db.dialect.ColumnType" reference="../../../targetConnections/net.java.amateras.db.visual.model.ForeignKeyModel/source/sourceConnections/net.java.amateras.db.visual.model.ForeignKeyModel[2]/target/targetConnections/net.java.amateras.db.visual.model.ForeignKeyModel[2]/source/columns/net.java.amateras.db.visual.model.ColumnModel[4]/columnType"/>
                 <size>50</size>
-                <notNull>false</notNull>
-                <primaryKey>false</primaryKey>
-                <description></description>
-                <autoIncrement>false</autoIncrement>
-                <defaultValue></defaultValue>
-              </net.java.amateras.db.visual.model.ColumnModel>
-              <net.java.amateras.db.visual.model.ColumnModel>
-                <columnName>product_no</columnName>
-                <logicalName>product_no</logicalName>
-                <columnType class="net.java.amateras.db.dialect.ColumnType" reference="../../../targetConnections/net.java.amateras.db.visual.model.ForeignKeyModel/source/sourceConnections/net.java.amateras.db.visual.model.ForeignKeyModel[2]/target/targetConnections/net.java.amateras.db.visual.model.ForeignKeyModel[2]/source/columns/net.java.amateras.db.visual.model.ColumnModel[5]/columnType"/>
-                <size>10</size>
                 <notNull>false</notNull>
                 <primaryKey>false</primaryKey>
                 <description></description>
@@ -565,11 +574,11 @@
   <dommains/>
   <dialectName>Oracle</dialectName>
   <logicalMode>false</logicalMode>
-  <jarFile>C:\JAVA_PYTHON_MI\04 JDBC\99.LIB\ojdbc6.jar</jarFile>
+  <jarFile>C:\JAVA_PYTHON\04.JDBC\99.LIB\ojdbc6.jar</jarFile>
   <jdbcDriver>oracle.jdbc.OracleDriver</jdbcDriver>
   <jdbcUrl>jdbc:oracle:thin:@182.237.126.19:1521:XE</jdbcUrl>
-  <jdbcUser>javapython10</jdbcUser>
-  <jdbcPassword>javapython10</jdbcPassword>
+  <jdbcUser>javapython31</jdbcUser>
+  <jdbcPassword>javapython31</jdbcPassword>
   <jdbcSchema></jdbcSchema>
   <jdbcCatalog></jdbcCatalog>
   <includeView>false</includeView>

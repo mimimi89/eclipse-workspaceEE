@@ -27,5 +27,3 @@ ALTER TABLE member ADD CONSTRAINT IDX_member_PK PRIMARY KEY (m_id);
 ALTER TABLE board ADD CONSTRAINT IDX_board_PK PRIMARY KEY (b_no);
 ALTER TABLE board ADD CONSTRAINT IDX_board_FK0 FOREIGN KEY (m_id) REFERENCES member (m_id);
 
-
-INSERT INTO member (m_id, m_name, m_address, m_point, m_gender, m_date) VALUES (m_id, m_name, m_address, m_point, m_gender, m_date);INSERT INTO member () VALUES ();INSERT INTO member (m_id, m_name, m_address, m_point, m_gender, m_date) VALUES (m_id, m_name, m_address, m_point, m_gender, m_date);
