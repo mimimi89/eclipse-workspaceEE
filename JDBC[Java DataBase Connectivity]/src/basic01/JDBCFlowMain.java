@@ -12,11 +12,6 @@ public class JDBCFlowMain {
 
 	public static void main(String[] args) throws Exception {
 		
-		String driverClass="oracle.jdbc.OracleDriver";
-		String url="jdbc:oracle:thin:@182.237.126.19:1521:XE";
-		String user="javapython10";
-		String password="javapython10";
-		
 		/**************설정파일로부터 DB접속정보얻기*************
 		Properties dbProperties=new Properties();
 		dbProperties.load(
@@ -27,6 +22,11 @@ public class JDBCFlowMain {
 		String user=dbProperties.getProperty("user");
 		String password=dbProperties.getProperty("password");
 		*/
+		
+		String driverClass="oracle.jdbc.OracleDriver";
+		String url="jdbc:oracle:thin:@182.237.126.19:1521:XE";
+		String user="javapython10";
+		String password="javapython10";
 		
 		String selectSql="select * from emp";
 		
