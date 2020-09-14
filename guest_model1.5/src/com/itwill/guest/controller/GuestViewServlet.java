@@ -19,38 +19,11 @@ import com.itwill.guest.GuestService;
 public class GuestViewServlet extends HttpServlet {
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String forwardPath="";
+		String forwardPath="forward:/WEB-INF/views/guest_view.jsp";
 		
-		String guest_noStr = request.getParameter("guest_no");
-		if(guest_noStr==null||guest_noStr.equals("")){
-			//response.sendRedirect("guest_list.jsp");
-			forwardPath="redirect:guest_list.do";
-		}else {
-			try {
-			GuestService guestService=new GuestService();
-			Guest guest=
-					guestService.selectByNo(Integer.parseInt(guest_noStr));
-			request.setAttribute("guest", guest);
-			forwardPath="forward:/WEB-INF/views/guest_view.jsp";
-			/*
-			if(guest==null){
-				out.println("<script>");
-				out.println("alert('존재하지않는 게시물입니다');");
-				out.println("history.back();");
-				out.println("</script>");
-				return;
-			}
-			*/
-			}catch (Exception e) {
-				e.printStackTrace();
-				forwardPath="forward:guest_error.jsp";
-			}
-			
-		}
 		String [] pathArray = forwardPath.split(":");
 		String forwardOrRedirect=pathArray[0];
 		String path=pathArray[1];
-	
 		if(forwardOrRedirect.equals("redirect")) {
 			response.sendRedirect(path);
 		}else {

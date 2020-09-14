@@ -20,16 +20,8 @@ import com.itwill.guest.GuestService;
 public class GuestListServlet extends HttpServlet {
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String forwardPath="";
-		try {
-			GuestService guestService=new GuestService();
-			ArrayList<Guest> guestList=guestService.selectAll();
-			request.setAttribute("guestList", guestList);
-			forwardPath="forward:/WEB-INF/views/guest_list.jsp";
-		}catch (Exception e) {
-			e.printStackTrace();
-			forwardPath="forward:/WEB-INF/views/guest_error.jsp";
-		}
+		String forwardPath="forward:/WEB-INF/views/guest_list.jsp";
+		
 		String [] pathArray = forwardPath.split(":");
 		String forwardOrRedirect=pathArray[0];
 		String path=pathArray[1];
@@ -41,6 +33,7 @@ public class GuestListServlet extends HttpServlet {
 			RequestDispatcher rd=request.getRequestDispatcher(path);
 			rd.forward(request, response);
 		}
+		
 	}
 
 }

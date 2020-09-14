@@ -58,9 +58,9 @@ public class JDBCFlowMain {
 		
 		while(rs.next()) {
 			System.out.println(
-					rs.getNString("EMPNO")+"\t"+
-					rs.getNString("ENAME")+"\t"+
-					rs.getNString("JOB"));
+					rs.getString("EMPNO")+"\t"+
+					rs.getString("ENAME")+"\t"+
+					rs.getString("JOB"));
 			
 		}
 		/*
